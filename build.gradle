@@ -1,16 +1,23 @@
-apply plugin: 'com.android.library'
-apply plugin: 'maven'
-
-group = 'com.vogella.libraries'
-version = '1.0'
-
-uploadArchives {
+buildscript {
     repositories {
-        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
     }
 }
 
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+//maven repository info
+group = 'com.nranalytics'
+version = '0.1'
+
 android {
+
+
     compileSdkVersion 26
 
 
